@@ -1,7 +1,8 @@
 const container = document.querySelector("#container");
 const dimensionText = document.querySelector("#dimensionText");
 const range = document.querySelector("#range");
-dimensionText.textContent = range.value;
+
+dimensionText.textContent = range.value+" x "+range.value;
 range.addEventListener("input", (event) => {
   dimensionText.textContent = event.target.value+" x "+event.target.value;
 });
@@ -13,7 +14,8 @@ let dimension = size*size;
       const block = document.createElement("div");
       container.appendChild(block);
       block.textContent = " ";
-      block.style.backgroundColor = "brown";
+      block.style.backgroundColor = "white";
     }
   }
-makeGrid();
+
+makeGrid(100);

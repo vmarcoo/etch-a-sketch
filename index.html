@@ -4,16 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500;800&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <header>Etch-a-sketch!</header>
     <main>
-        <div id="container"></div>
         <aside>
-            <input id="range" name="dimension" type="range" min="8" max="64" step="1">
-            <label for="dimension">Choose the dimensions of your grid</label>
-            <p id="dimensionText"></p>
+            <div id="rangeDiv">
+                <label for="dimension">Choose the dimensions of your grid</label>
+                <input id="range" name="dimension" type="range" value="0" min="1" max="100" step="1">
+                <p id="dimensionText"></p>
+            </div>
+
+            <div id="colorDiv">
+                <input type="color" name="" id="" value="#000000">
+                <button>Color mode</button>
+            </div>
+
+            <div id="grayDiv">
+                <button>Gray scale mode</button>
+            </div>
+
+            <div id="rainbowDiv">
+                <button>Rainbow mode</button>
+            </div>
+
+            <div id="eraserDiv">
+                <button>Eraser</button>
+            </div>
+
+            <div id="clearDiv">
+                <button>Clear</button>
+            </div>
         </aside>
+        
+        <div id="container">
+
+        </div>
     </main>
     <footer>Developed by <a style="text-decoration: none;" href="https://github.com/vmarcoo/">&nbsp;vmarcoo</a>&nbsp;for<a style="text-decoration: none;" href="https://theodinproject.com/">&nbsp;The Odin Project's Foundations course</a></footer>
 </body>
