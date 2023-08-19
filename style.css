@@ -13,20 +13,21 @@ body {
 }
 
 header {
-    min-height: 15vh;
-    max-height: 15vh;
-    font-size: 10vh;
+    min-height: 10vh;
+    max-height: 10vh;
+    font-size: 6vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 1vh;
 }
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 81.5vh;
-    max-height: 81.5vh;
+    min-height: 85.5vh;
+    max-height: 85.5vh;
     flex-wrap: wrap;
     gap: 5rem;
 }
@@ -39,13 +40,6 @@ main {
     max-height: 500px;
     min-height: 500px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#container div {
-    min-width: 5px;
-    max-width: 5px;
-    min-height: 5px;
-    max-height: 5px;
 }
 
 aside {
@@ -80,4 +74,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+a {
+    transition: transform .2s;
+}
+
+a:hover {
+    transform: scale(1.02);
 }
