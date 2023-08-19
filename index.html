@@ -6,7 +6,7 @@
     <title>Etch-a-Sketch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500;800&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500;800&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -14,37 +14,36 @@
     <main>
         <aside>
             <div id="rangeDiv">
-                <label for="dimension">Choose the dimensions of your grid</label>
+                <label for="dimension">Choose the dimensions of your grid:</label>
                 <input id="range" name="dimension" type="range" value="0" min="1" max="100" step="1">
                 <p id="dimensionText"></p>
             </div>
 
             <div id="colorDiv">
-                <input type="color" name="" id="" value="#000000">
-                <button>Color mode</button>
+                <input type="color" name="" id="colorPicker" value="#000000">
+                <button id="colorBtn">Color mode</button>
             </div>
 
             <div id="grayDiv">
-                <button>Gray scale mode</button>
+                <button id="grayBtn">Gray scale mode</button>
             </div>
 
             <div id="rainbowDiv">
-                <button>Rainbow mode</button>
+                <button id="rainbowBtn">Rainbow mode</button>
             </div>
 
             <div id="eraserDiv">
-                <button>Eraser</button>
+                <button id="eraserBtn">Eraser mode</button>
             </div>
 
             <div id="clearDiv">
-                <button>Clear</button>
+                <button id="clearBtn">Clear</button>
             </div>
         </aside>
 
         <div id="container">
 
         </div>
-        <div style="color: rgb(90, 255, 29); min-height: 5px; max-height: 5px; min-width: 5px; max-width: 5px;">"</div>
     </main>
     <footer>Developed by <a style="text-decoration: none; color: white;" target="_blank" href="https://github.com/vmarcoo/">&nbsp;vmarcoo</a>&nbsp;for<a style="text-decoration: none; color: white;" target="_blank" href="https://theodinproject.com/">&nbsp;The Odin Project's Foundations course</a></footer>
 </body>

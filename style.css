@@ -9,17 +9,19 @@ body {
     overflow: hidden;
     font-family: 'Handjet', cursive;
     font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     background-color: rgba(209, 212, 212, 0.353);
 }
 
 header {
     min-height: 10vh;
     max-height: 10vh;
-    font-size: 6vh;
+    font-size: 8.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 1vh;
+    text-shadow: .4vh .4vh #bdb7b7
 }
 
 main {
@@ -52,7 +54,7 @@ aside div {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1.5vh;
 }
 
 #rangeDiv{
@@ -61,10 +63,50 @@ aside div {
 
 #rangeDiv, button {
     font-size: 1.5rem;
+    padding: .1vh 4vh;
+}
+
+#range {
+    accent-color: black;
+    cursor: pointer;
+}
+
+button {
+    border-radius: 1.5vh;
+    border: .2vh solid black;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+#clearBtn:active {
+    background-color: black;
+    color: white;
 }
 
 #colorDiv {
     gap: 1.7rem;
+}
+
+#colorPicker {
+    appearance: none;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+    transition: transform .2s;
+  }
+
+#colorPicker::-webkit-color-swatch {
+    border-radius: 50%;
+}
+
+#colorPicker:hover{
+    transform: scale(1.07);
 }
 
 footer {
@@ -84,4 +126,9 @@ a {
 
 a:hover {
     transform: scale(1.02);
+}
+
+.activeBtn{
+    background-color: black;
+    color: white;
 }
