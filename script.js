@@ -106,18 +106,18 @@ function draw(color){
     if(color.type === "mouseover" && !mouseBtnPressed) return
   
     if(currentMode === "color"){
-      color.target.style.backgroundColor=startColor
+      color.target.style.backgroundColor = startColor
     }
   
     if(currentMode === "gray"){
-      color.target.style.backgroundColor = "yellow"
+      color.target.style.backgroundColor = startColor
     }
   
     if(currentMode === "rainbow"){
-      color.target.style.backgroundColor=`rgb(${red}, ${green}, ${blue})`
+      color.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
     }
   
     if(currentMode === "eraser"){
-      color.target.style.backgroundColor="#FFFFFF"
+      color.target.style.backgroundColor = "#FFFFFF"
     }
   }
