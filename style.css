@@ -21,7 +21,8 @@ header {
     align-items: center;
     justify-content: center;
     padding-top: 1vh;
-    text-shadow: .4vh .4vh #bdb7b7
+    text-shadow: .4vh .4vh #bdb7b7;
+    font-weight: bolder;
 }
 
 main {
@@ -42,6 +43,7 @@ main {
     max-height: 500px;
     min-height: 500px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
 }
 
 aside {
@@ -57,6 +59,11 @@ aside div {
     padding: 1.5vh;
 }
 
+#range {
+    accent-color: black;
+    cursor: pointer;
+}
+
 #rangeDiv{
     gap: .9rem;
 }
@@ -64,11 +71,6 @@ aside div {
 #rangeDiv, button {
     font-size: 1.5rem;
     padding: .1vh 4vh;
-}
-
-#range {
-    accent-color: black;
-    cursor: pointer;
 }
 
 button {
