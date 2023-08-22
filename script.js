@@ -13,6 +13,9 @@ const range = document.querySelector("#range");
 const colorPicker = document.querySelector("#colorPicker");
 let startColor = "#000000";
 let currentMode = "color";
+let mouseBtnPressed = false
+document.body.onmousedown = () => (mouseBtnPressed = true)
+document.body.onmouseup = () => (mouseBtnPressed = false)
 
 dimensionText.textContent = range.value+" x "+range.value;
 range.addEventListener("input", (event) => {
@@ -65,11 +68,7 @@ function setCurrentMode(mode){
     currentMode = "eraser";
   }
   if (mode === "clear") {
-    colorBtn.classList.remove("activeBtn")
-    grayBtn.classList.remove("activeBtn")
-    rainbowBtn.classList.remove("activeBtn")
-    eraserBtn.classList.remove("activeBtn")
-    currentMode = "clear"
+    clearGrid();
   }
 }
 
@@ -78,7 +77,9 @@ function setGrid(size) {
   let dimension = size*size;
     for (i = 0; i < dimension; i++) {
         const block = document.createElement("div");
-        block.addEventListener("mouseover", (event)=>{draw(event)});
+        block.classList.add("colorBlock");
+        block.addEventListener("mouseover", (event) => {draw(event)});
+        block.addEventListener("mousedown", (event) => {draw(event)});
         const divSize = 500/size+"px";
         block.style.minHeight = divSize;
         block.style.maxHeight = divSize;
@@ -88,12 +89,35 @@ function setGrid(size) {
       }
 }
 
+function clearGrid(){
+  container.innerHTML="";
+  setGrid(range.value);
+}
+
 function colorSelection(color){
   startColor = color;
 }
 
 function draw(color){
-  if(currentMode === "color"){
-    color.target.style.backgroundColor=startColor
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  
+    if(color.type === "mouseover" && !mouseBtnPressed) return
+  
+    if(currentMode === "color"){
+      color.target.style.backgroundColor=startColor
+    }
+  
+    if(currentMode === "gray"){
+      color.target.style.backgroundColor = "yellow"
+    }
+  
+    if(currentMode === "rainbow"){
+      color.target.style.backgroundColor=`rgb(${red}, ${green}, ${blue})`
+    }
+  
+    if(currentMode === "eraser"){
+      color.target.style.backgroundColor="#FFFFFF"
+    }
   }
-}

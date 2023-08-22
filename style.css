@@ -134,3 +134,7 @@ a:hover {
     background-color: black;
     color: white;
 }
+
+.colorBlock {
+    user-select: none;
+}
