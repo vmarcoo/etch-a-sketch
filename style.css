@@ -11,6 +11,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Varela Round', sans-serif;
     background-color: rgba(209, 212, 212, 0.353);
+    user-select: none;
 }
 
 header {
@@ -133,8 +134,4 @@ a:hover {
 .activeBtn{
     background-color: black;
     color: white;
-}
-
-.colorBlock {
-    user-select: none;
 }
