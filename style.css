@@ -134,17 +134,22 @@ button:hover, #downloadBtn:hover{
 }
 
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     bottom: 0;
     padding: .3rem;
+    width: 100%;
     white-space: nowrap;
     font-size: 1.5rem;
-    color: black;
+    color: white;
+    background-color: black;
 }
 
 footer a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 a:hover {
