@@ -9,6 +9,7 @@ const container = document.querySelector("#container")
 const dimensionText = document.querySelector("#dimensionText")
 const range = document.querySelector("#range")
 const colorPicker = document.querySelector("#colorPicker")
+const downloadButton = document.querySelector("#downloadBtn")
 
 let startColor = "#000000"
 let currentMode = "color"
@@ -31,6 +32,8 @@ grayBtn.addEventListener("click", () => setCurrentMode("gray"))
 eraserBtn.addEventListener("click", () => setCurrentMode("eraser"))
 
 clearBtn.addEventListener("click", () => setCurrentMode("clear"))
+
+downloadButton.addEventListener("click", () => screenshot())
 
 colorPicker.addEventListener("input", (e)=> colorSelection(e.target.value))
 
@@ -193,4 +196,11 @@ function grayScale (block) {
     block.target.classList.add("black")
     return draw(block)
   }
+}
+
+function screenshot () {
+  html2canvas(container).then((canvas) => {
+    const imageData = canvas.toDataURL("image/png");
+    downloadButton.setAttribute("href", imageData);
+  })
 }
