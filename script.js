@@ -100,9 +100,9 @@ function setGrid (size) {
     const block = document.createElement("div")
     block.classList.add("white")
     block.addEventListener("mouseover", (event) => draw(event))
-    block.addEventListener("click", (event) => draw(event))
+    block.addEventListener("mousedown", (event) => draw(event))
     block.addEventListener("mouseover", (event) => grayScale(event))
-    block.addEventListener("click", (event) => grayScale(event))
+    block.addEventListener("mousedown", (event) => grayScale(event))
     const divSize = 500/size+"px"
     block.style.minHeight = divSize
     block.style.maxHeight = divSize
