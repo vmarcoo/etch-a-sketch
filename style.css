@@ -136,16 +136,15 @@ button:hover, #downloadBtn:hover{
 footer {
     position: absolute;
     bottom: 0;
-    padding: .3rem 100%;
+    padding: .3rem;
     white-space: nowrap;
     font-size: 1.5rem;
-    color: white;
-    background-color: black;
+    color: black;
 }
 
 footer a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 a:hover {
