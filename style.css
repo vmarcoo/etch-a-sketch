@@ -160,3 +160,44 @@ a:hover {
     background-color: black;
     color: white;
 }
+
+@media (max-width: 1200px) {
+    main {
+      justify-content: center;
+    }
+}
+  
+@media (max-width: 850px) {
+    main {
+      gap: 50px;
+    }
+  
+    #aside {
+      width: 150px;
+      gap: 16px;
+    }
+  
+    #dimensionText {
+      margin-bottom: -4px;
+    }
+  
+    #container {
+      width: 400px;
+      height: 400px;
+    }
+}
+  
+@media (max-width: 650px) {
+    header {
+      font-size: 50px;
+    }
+  
+    main {
+      flex-direction: column-reverse;
+    }
+  
+    #container {
+      width: 300px;
+      height: 300px;
+    }
+}
