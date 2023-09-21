@@ -6,7 +6,7 @@ html {
 body {
     overflow-x: hidden;
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +52,7 @@ main {
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
     background-color: white;
 }
 
@@ -62,12 +62,12 @@ main {
 
 #aside div {
     position: relative;
-    bottom: 74px;
+    bottom: 4.625rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: .5rem;
 }
 
 #range {
@@ -117,8 +117,8 @@ button:hover, #downloadBtn:hover{
 #colorPicker {
     appearance: none;
     background-color: transparent;
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     border: none;
     cursor: pointer;
     transition: transform .2s;
@@ -161,9 +161,9 @@ a:hover {
 }
 
 @media (max-width: 600px){
-
+    
     body {
-        margin-bottom: 31.25px;
+        margin-bottom: 1.95rem;
     }
     
     header {
@@ -173,27 +173,28 @@ a:hover {
     }
     
     main {
-        margin-top: .94rem;
+        margin-top: .9375rem;
         gap: .625rem;
+    
     }
     
     #containerDiv{
-        gap: .31rem;
+        gap: .3125rem;
     }
     
     #container {
         width: 500px;
         height: 500px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, 0.2), 0 .375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
     }
     
     #aside {
-      margin-top: 1.56rem;  
+      margin-top: 1.5625rem;  
     }
     
     #aside div {
-        bottom: 74px;
-        padding: 8px;
+        bottom: 1.44rem;
+        padding: .15rem;
     }
     
     #rangeDiv{
@@ -206,25 +207,28 @@ a:hover {
     
     #rangeDiv, button {
         font-size: .47rem;
-        padding: .031rem .625rem;
+        padding: .03125rem 1.5625rem;
     }
     
     button {
         border-radius: .47rem;
+        border: .03125rem solid black;
+        text-decoration: none;
+        color: black;
     }
     
     #downloadBtn {
         font-size: .625rem;
         border-radius: .47rem;
-        border: .031rem solid black;
-        padding: .12rem .25rem;
+        border: .03125rem solid black;
+        padding: .125rem .25rem;
     }
     
     #colorPicker {
-        width: 100px;
-        height: 100px;
-    }
-
+        width: 1.95rem;
+        height: 1.95rem;
+      }
+    
     footer {
         padding: .094rem;
         font-size: .47rem;
